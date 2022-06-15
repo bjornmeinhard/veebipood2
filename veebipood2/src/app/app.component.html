@@ -1,9 +1,19 @@
 <button class="nupp">BANNER</button>
 <br><br><br><br>
 <!-- routerLink="/" suunab meid localhost:4200/-->
-
+<br><br>
+<div>Lehe keel: {{programmiKeel}}</div>
+<button (click)="valiKeel('EE')">Eesti keel</button>
+<button (click)="valiKeel('EN')">Inglise keel</button>
+<button (click)="valiKeel('RU')">Vene keel</button>
+<br><br>
 <button class="avalehebutton" routerLink="/">AVALEHELE</button>
 <button class="ostukorvibutton" routerLink="/ostukorv">OSTUKORVI</button>
 <button class="lisa-toodebutton" routerLink="/lisa-toode">LISA TOODE</button>
+<button routerLink="/poed">POED</button>
+<br>
+<button routerLink="/lisa-keskus">KESKUS</button>
+
+<button>MIDA</button>
 <router-outlet></router-outlet>
 

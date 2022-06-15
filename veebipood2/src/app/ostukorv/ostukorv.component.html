@@ -1,1 +1,13 @@
 
+<br><br>
+
+<div *ngIf="ostukorviTooted.length === 0">Ostukorv on tühi</div>
+<button *ngIf="ostukorviTooted.length > 0" (click)="tyhjenda()">Tühjenda</button>
+
+
+
+<div *ngFor="let t of ostukorviTooted">
+    {{ t }}
+<button (click)="lisaOstukorvi(t)">+</button>
+<button (click)="eemaldaOstukorvist(t)">x</button>
+</div>
