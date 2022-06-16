@@ -7,16 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoedComponent implements OnInit {
 
-  v2ljakuvatavKontakt = "";
-  keskused = localStorage.getItem("Keskused");
+  v2ljakuvatavKontakt: any;
+  
+  keskused = [{nimi: 'Kristiine', tel: '5197643', aadress: 'Tammsaare tee'},
+{nimi: 'Helsinki', tel: '+123456789', aadress: 'Mökki Tee'},
+{nimi: 'Mustamäe', tel: '+12345678', aadress: 'Linnu Tee'},
+]
+
+  //ostukorviTooted:string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    // let lsostukorv = localStorage.getItem("ostukorv");
+    
+    // if (lsostukorv !== null) {
+    //   this.ostukorviTooted = JSON.parse(lsostukorv);
+    // }
   }
 
-  v6taYhendust(telefoniNumber: string) {
-    this.v2ljakuvatavKontakt = telefoniNumber;
+  v6taYhendust(keskus: any) {
+    this.v2ljakuvatavKontakt = keskus;
+    
 
   }
 

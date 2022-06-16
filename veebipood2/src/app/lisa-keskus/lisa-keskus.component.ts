@@ -19,7 +19,7 @@ export class LisaKeskusComponent implements OnInit {
   }
 
   sisestaKeskus() {
-    localStorage.setItem("Keskus", this.uusKeskus);
+   
 
     let lsKeskused = localStorage.getItem("Keskus");
     let Keskused = [];

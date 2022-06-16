@@ -6,8 +6,8 @@
 <div (click)="v6taYhendust('53466298')">Ülemiste keskus</div>
 <div (click)="v6taYhendust('53466299')">Lõuna keskus</div> -->
 
-<div *ngFor="let keskuseNimi of keskused">{{keskuseNimi}} keskus</div> 
+<div *ngFor="let keskuseNimi of keskused" (click)="v6taYhendust(keskuseNimi)">{{keskuseNimi.nimi}} keskus</div> 
 
 <br><br>
 
-<div *ngIf="v2ljakuvatavKontakt !==''">Nende kontakt on: {{ v2ljakuvatavKontakt }}</div>
+<div *ngIf="v2ljakuvatavKontakt !==''">Nende kontakt on: {{ v2ljakuvatavKontakt.tel }}, {{ v2ljakuvatavKontakt.aadress }}</div>

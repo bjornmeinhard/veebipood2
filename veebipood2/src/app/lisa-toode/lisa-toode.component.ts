@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lisa-toode.component.css']
 })
 export class LisaToodeComponent implements OnInit {
-  uusToode = "";
+  
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  sisestaToode() {
-    localStorage.setItem("toode", this.uusToode);
+  sisestaToode(lisamisevorm: any) {
+    // localStorage.setItem("toode", this.uusToode);
 
     let lsTooted = localStorage.getItem("tooted");
     let tooted = [];
@@ -22,7 +22,7 @@ export class LisaToodeComponent implements OnInit {
       tooted = JSON.parse(lsTooted);
     }
 
-    tooted.push(this.uusToode);
+    tooted.push(lisamisevorm.value);
     localStorage.setItem("tooted", JSON.stringify(tooted));
   }
 }
