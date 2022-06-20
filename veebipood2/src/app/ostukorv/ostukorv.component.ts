@@ -23,13 +23,13 @@ export class OstukorvComponent implements OnInit {
     this.arvutaKogusumma();
   }
 
-  lisaOstukorvi(toode: string) {
+  lisaOstukorvi(toode: any) {
     this.ostukorviTooted.push(toode);
     localStorage.setItem("ostukorv", JSON.stringify(this.ostukorviTooted));
     this.arvutaKogusumma();
   }
 
-  eemaldaOstukorvist(toode: string) {
+  eemaldaOstukorvist(toode: any) {
     let index = this.ostukorviTooted.indexOf(toode);
     this.ostukorviTooted.splice(index, 1);
     this.arvutaKogusumma();

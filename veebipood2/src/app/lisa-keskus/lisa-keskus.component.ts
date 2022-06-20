@@ -6,29 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lisa-keskus.component.css']
 })
 export class LisaKeskusComponent implements OnInit {
-  uusKeskus = "";
+  
 
   constructor() { }
 
   ngOnInit(): void {
-    let lsKeskused = localStorage.getItem("Keskus");
-    
-    if (lsKeskused !== null) {
-      this.uusKeskus = JSON.parse(lsKeskused);
-    }
   }
-
-  sisestaKeskus() {
-   
-
-    let lsKeskused = localStorage.getItem("Keskus");
-    let Keskused = [];
-    if (lsKeskused !== null) {
-      Keskused = JSON.parse(lsKeskused);
+    lisaKeskus(form: any) {
+    //  console.log(form.value);
+    let keskused = [];
+    let keskusedLS = localStorage.getItem("keskused");
+    if (keskusedLS !== null) {
+      keskused = JSON.parse(keskusedLS);
     }
-
-    Keskused.push(this.uusKeskus);
-    localStorage.setItem("Keskus", JSON.stringify(Keskused));
-  }
-
+    keskused.push(form.value);
+    localStorage.setItem("keskused", JSON.stringify(keskused));
+  
+    }
+ 
 }

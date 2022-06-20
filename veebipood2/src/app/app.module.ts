@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { KodulehtComponent } from './koduleht/koduleht.component';
 import { LisaKeskusComponent } from './lisa-keskus/lisa-keskus.component';
 import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
+import { MuudaToodeComponent } from './muuda-toode/muuda-toode.component';
+import { HaldaTooteidComponent } from './halda-tooteid/halda-tooteid.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { YksikToodeComponent } from './yksik-toode/yksik-toode.component';
     PoedComponent,
     KodulehtComponent,
     LisaKeskusComponent,
-    YksikToodeComponent
+    YksikToodeComponent,
+    MuudaToodeComponent,
+    HaldaTooteidComponent
   ],
   imports: [
     BrowserModule, //ngIf, ngFor

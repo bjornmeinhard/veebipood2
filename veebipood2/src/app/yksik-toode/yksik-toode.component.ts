@@ -14,13 +14,15 @@ export class YksikToodeComponent implements OnInit {
   ngOnInit(): void {
 
 let tooteNimi = window.location.href.split("toode/")[1];
+let tooted = [];
 let lsTooted = localStorage.getItem("tooted");
-    let tooted = [];
+    
     if (lsTooted !== null) {
-      tooted = JSON.parse(lsTooted);
+      tooted = JSON.parse(lsTooted); 
     }
    
-    this.leitudToode = tooted.find((element:any) => element.nimi.toLowerCase().replaceAll(' ','-') === tooteNimi);
+    this.leitudToode = tooted.find((element:any) => 
+    element.nimi.toLowerCase().replaceAll(' ','-') === tooteNimi);
 
   }
 

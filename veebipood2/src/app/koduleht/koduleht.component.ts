@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KodulehtComponent implements OnInit {
 
-  viimatiLisatudToode = localStorage.getItem("toode"); // HTML-s kuvamiseks
+  // viimatiLisatudToode = localStorage.getItem("toode"); // HTML-s kuvamiseks
   tooted: any[] = []; // HTML-s kuvamiseks
 
   constructor() { }
